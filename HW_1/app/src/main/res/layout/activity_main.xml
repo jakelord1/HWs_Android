@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/prediction_display"
+        android:layout_width="306dp"
+        android:layout_height="310dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="300dp"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:text="Хотите предсказаний?"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <Button
+        android:id="@+id/prediction_generator"
+        android:layout_width="237dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="87dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="87dp"
+        android:layout_marginBottom="113dp"
+        android:background="#FF0303"
+        android:onClick="selectPrediction"
+        android:text="Получить предсказание"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prediction_display" />
+</androidx.constraintlayout.widget.ConstraintLayout>
