@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootRL"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/_kzat"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="385dp"
+        android:src="@drawable/album_icon"
+        app:layout_constraintBottom_toTopOf="@+id/songduration"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/collapse"
+        style="?attr/materialIconButtonStyle"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:contentDescription="collapse"
+        android:gravity="center"
+        app:iconGravity="textStart"
+        android:background="@null"
+        app:icon="@drawable/down"
+
+        />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/songduration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="382dp"
+        android:indeterminate="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="317dp"
+        app:indicatorDirectionLinear="startToEnd" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:layout_marginTop="335dp"
+        >
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:textColor="@color/design_default_color_background"
+        android:text="Escape"
+        android:textSize="36dp"/>
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/design_default_color_surface"
+            android:text="Netsky"
+            android:textSize="16dp"/>
+
+    <com.google.android.material.button.MaterialButtonGroup
+        android:id="@+id/songbuttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/like"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="like"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            android:background="@null"
+            app:icon="@drawable/heart"
+            />
+
+        <Button
+            android:id="@+id/shuffle"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="shuffle"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            android:background="@null"
+            app:icon="@drawable/shuffle"
+            />
+
+
+        <Button
+            android:id="@+id/previous"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="prev"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            app:icon="@drawable/back" />
+
+        <Button
+            android:id="@+id/pause"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="pause"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            app:icon="@drawable/pause"
+            android:scaleX="1.2"
+            android:scaleY="1.2" />
+
+        <Button
+            android:id="@+id/next"
+            style="?attr/materialIconButtonFilledStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="next"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            app:icon="@drawable/play" />
+
+        <Button
+            android:id="@+id/repeat"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="repeat"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            app:icon="@drawable/repeat"/>
+
+        <Button
+            android:id="@+id/settings"
+            style="?attr/materialIconButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="settings"
+            android:gravity="center"
+            app:iconGravity="textStart"
+            android:background="@null"
+            app:icon="@drawable/dots"/>
+
+    </com.google.android.material.button.MaterialButtonGroup>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/songList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="470dp">
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
+
