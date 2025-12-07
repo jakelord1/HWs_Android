@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace = "com.jkld.hw_3"
+    namespace = "com.jkld.hw_diagram"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.jkld.hw_3"
+        applicationId = "com.jkld.hw_diagram"
         minSdk = 31
         targetSdk = 36
         versionCode = 1
@@ -38,9 +38,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.ui.tooling.data)
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.github.AnyChart:AnyChart-Android:1.1.2")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
